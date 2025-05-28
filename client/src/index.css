@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Noto+Sans:wght@400;500;600;700&family=Tajawal:wght@300;400;500;700;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 240 10% 3.9%;
+  --card: 0 0% 100%;
+  --card-foreground: 240 10% 3.9%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 240 10% 3.9%;
+  --primary: 271 75% 60%; /* #8152E1 Purple */
+  --primary-foreground: 0 0% 100%; /* White */
+  --secondary: 270 60% 52%; /* Slightly darker purple */
+  --secondary-foreground: 0 0% 100%;
+  --muted: 270 20% 96%;
+  --muted-foreground: 270 10% 50%;
+  --accent: 270 80% 70%; /* Lighter purple accent */
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 270 20% 90%;
+  --input: 270 20% 96%;
+  --ring: 271 75% 60%;
+  --radius: 0.5rem;
+  
+  /* Chart colors */
+  --chart-1: 271 75% 60%;
+  --chart-2: 270 60% 52%;
+  --chart-3: 270 80% 70%;
+  --chart-4: 271 60% 40%;
+  --chart-5: 270 40% 80%;
+  
+  /* Sidebar colors */
+  --sidebar-background: 0 0% 100%;
+  --sidebar-foreground: 240 10% 3.9%;
+  --sidebar-primary: 271 75% 60%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 270 60% 52%;
+  --sidebar-accent-foreground: 0 0% 100%;
+  --sidebar-border: 270 20% 90%;
+  --sidebar-ring: 271 75% 60%;
+}
+
+.dark {
+  --background: 280 15% 15%;  /* Dark purple-gray */
+  --foreground: 0 0% 98%;
+  --card: 280 15% 18%;
+  --card-foreground: 0 0% 98%;
+  --popover: 280 15% 15%;
+  --popover-foreground: 0 0% 98%;
+  --primary: 271 75% 60%;  /* #8152E1 Purple */
+  --primary-foreground: 0 0% 100%;
+  --secondary: 270 70% 65%;  /* Brighter purple */
+  --secondary-foreground: 0 0% 100%;
+  --muted: 280 15% 25%;
+  --muted-foreground: 270 10% 70%;
+  --accent: 280 60% 50%;  /* Dark purple accent */
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 280 15% 25%;
+  --input: 280 15% 25%;
+  --ring: 271 75% 60%;
+  
+  /* Chart colors */
+  --chart-1: 271 75% 60%;
+  --chart-2: 270 70% 65%;
+  --chart-3: 280 60% 50%;
+  --chart-4: 270 80% 70%;
+  --chart-5: 270 40% 80%;
+  
+  /* Sidebar colors */
+  --sidebar-background: 280 15% 15%;
+  --sidebar-foreground: 0 0% 98%;
+  --sidebar-primary: 271 75% 60%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 270 70% 65%;
+  --sidebar-accent-foreground: 0 0% 100%;
+  --sidebar-border: 280 15% 25%;
+  --sidebar-ring: 271 75% 60%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+  
+  .font-amiri {
+    font-family: 'Amiri', serif;
+  }
+  
+  .card {
+    @apply bg-white dark:bg-neutral-800 rounded-xl border border-neutral-200 dark:border-neutral-700 shadow-sm overflow-hidden;
+  }
+  
+  .btn-primary {
+    @apply bg-primary-500 hover:bg-primary-600 text-white font-medium py-2 px-4 rounded-lg transition duration-150 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 w-full flex justify-center;
+  }
+  
+  .btn-secondary {
+    @apply bg-neutral-100 dark:bg-neutral-700 hover:bg-neutral-200 dark:hover:bg-neutral-600 text-neutral-900 dark:text-neutral-100 font-medium py-2 px-4 rounded-lg transition duration-150 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neutral-500 w-full flex justify-center;
+  }
+}
